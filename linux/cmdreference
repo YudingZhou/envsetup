@@ -1,0 +1,6 @@
+
+
+export cmdDisplayBrightness="display brightness : xrandr --output <display device e.g. DP-4> --brightness <value e.g. 0.5>"
+export cmdNetstatTcpConnPid="pid of tcp connections : netstat -ano -p tcp"
+export cmdhelper="\n$cmdDisplayBrightness:\n$cmdNetstatTcpConnPid"
+
