@@ -2,5 +2,12 @@
 
 export cmdDisplayBrightness="display brightness : xrandr --output <display device e.g. DP-4> --brightness <value e.g. 0.5>"
 export cmdNetstatTcpConnPid="pid of tcp connections : netstat -ano -p tcp"
+
+gmlogger_timeframe='ls | xargs -I % cat %| awk -F " " '{print $1,$2}'  | awk -F '.' '{print $1}' | awk -F : '{print $1,$2}' | uniq'
+
+gmlogger_transport_out_hb="ls | xargs -I % cat %| grep "Heartbeat" | grep 172.16.5.102 |  grep nfsa.transport.out | grep 1026.1 | awk -F ' ' '{print $2}' | awk -F '.' '{print $1}'"
+
 export cmdhelper="\n$cmdDisplayBrightness:\n$cmdNetstatTcpConnPid"
+
+
 
